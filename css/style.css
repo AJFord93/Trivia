@@ -68,9 +68,18 @@ body {
 
 #question {
 
-	font-size: 3em;
+	font-size: 2em;
 	font-family: arial;
 	background-color: #fff;
 
 
+}
+
+#wins, #losses {
+
+	color: black;
+	text-align: center;
+	position: relative;
+	top: 10%;
+	color: white;
 }

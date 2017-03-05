@@ -18,8 +18,15 @@ $('#start-game').fadeToggle(3000);
 
 
 
+
 var correct = 0;
 var incorrect = 0;
+
+function updateScore(){
+$('#wins').html('Correct: ' + correct);
+$('#losses').html('Incorrect: ' + incorrect);
+}
+
 var zelda = [
 
 { question : 'What is the name of the main character?', 
@@ -55,7 +62,12 @@ var intervalId;
 var number = 10;
 
 function reset(){
-  var number = 10;
+   number = 10;
+  $('#question').empty();
+  clearInterval(intervalId);
+  timer();
+  newNum();
+  displayQuestion();
 }
 
 function timer(){
@@ -69,8 +81,9 @@ function decrement() {
   $('#timer').html(number);
 
   if (number === 0){
-
-    clearInterval(intervalId);
+    incorrect++;
+    updateScore();
+    
 
     // checkAnswer();
     // newQuestion();
@@ -99,6 +112,10 @@ function decrement() {
   //         }
 var num = Math.floor(Math.random() * 6);
 
+function newNum(){
+  num = Math.floor(Math.random() * 6);
+}
+
 function displayQuestion() {
   $(".questions").show(300);
   $(".questions").css('width', '10%')
@@ -120,10 +137,12 @@ $('.questions').on('click', function(){
     if($(this).text() == answer){
       correct++;
       alert('Correct!');
+      updateScore();
     } else {
       incorrect++;
       alert('incorrect!');
       $('#question').html("The correct answer was " + zelda[num].answer);
+      updateScore();
     }
   
 });
