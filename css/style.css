@@ -1,0 +1,76 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: arial;
+}
+
+body {
+	background-image: url('../images/zelda_moonbg.jpg');
+	background-repeat: no-repeat;
+}
+
+#zelda-logo {
+	background-repeat: no-repeat;
+	margin-left: 5%;
+	margin-top: 2%;
+	display: none;
+
+}
+
+
+#start-game {
+	position: relative;
+	bottom: 7em;
+	font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn.outline {
+	background: none;
+	padding: 12px 22px;
+	display: none;
+}
+
+.btn-primary.outline {
+	border: 10px solid #3a4370;
+	color: #3a4370;
+}
+
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+	color: white;
+	border-color: white;
+	background: none;
+}
+.btn-primary.outline:active, .btn-primary.outline.active {
+	border-color: #3a4370;
+	color: #3a4370;
+	box-shadow: none;
+	background: none;
+}
+
+#timer {
+	font-size: 5em;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	top: 3em;
+	display: none;
+	}
+
+.btn.btn-block {
+
+	width: 20%;
+	position: relative;
+	left: 40%;
+
+}
+
+#question {
+
+	font-size: 3em;
+	font-family: arial;
+	background-color: #fff;
+
+
+}
